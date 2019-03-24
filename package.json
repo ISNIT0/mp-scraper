@@ -45,5 +45,9 @@
     "log-symbols": "^2.2.0",
     "minimist": "^1.2.0",
     "ora": "^3.2.0"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "mp-scraper": "./bin/mpscraper"
   }
 }

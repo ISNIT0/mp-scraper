@@ -4,7 +4,6 @@ import * as path from 'path';
 import ora from 'ora';
 import minimist from 'minimist';
 import { mapLimit, getMpDetailUrls, getMpDetail, logger } from './utils';
-import { createWriteStream } from 'fs';
 import { csvHeaderRow } from './utils/const';
 import {
   StructuredStreamWriter,
@@ -32,11 +31,11 @@ async function app(argv: any) {
       `[--format] is not set, defaulting to [${format}] (options: json|csv)`
     );
   }
-
+  
   let outputFilePath;
   if (!argv.outFile) {
     outputFilePath = path.join(process.cwd(), `mps.${format}`);
-    logger.log(`No output file specified, using [${outputFilePath}]`);
+    logger.log(`[--outFile] is not set, using [${outputFilePath}]`);
   } else {
     outputFilePath = path.join(process.cwd(), argv.outFile);
     logger.log(`Writing data to [${outputFilePath}]`);
