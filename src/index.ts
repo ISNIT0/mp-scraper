@@ -31,7 +31,7 @@ async function app(argv: any) {
       `[--format] is not set, defaulting to [${format}] (options: json|csv)`
     );
   }
-  
+
   let outputFilePath;
   if (!argv.outFile) {
     outputFilePath = path.join(process.cwd(), `mps.${format}`);
