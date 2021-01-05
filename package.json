@@ -39,7 +39,7 @@
     "typescript-tslint-plugin": "^0.3.1"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "backoff": "^2.5.0",
     "jsdom": "^14.0.0",
     "log-symbols": "^2.2.0",
